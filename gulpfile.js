@@ -114,7 +114,7 @@ gulp.task('clean', function (callback) {
     rimRaf(path.clean, callback)
 });
 
-gulp.task('publish', function(){
+gulp.task('publish', ['build'], function(){
     ghpages.publish('build', function(err) {
         console.log(err);
     });
