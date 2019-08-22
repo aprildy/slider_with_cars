@@ -11,7 +11,12 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     json = JSON.stringify,
     browserSync = require('browser-sync'),
+    ghpages = require('gh-pages'),
     reload = browserSync.reload;
+
+
+
+
 
 var path = {
     build: {
@@ -107,6 +112,12 @@ gulp.task('watch', function() {
 
 gulp.task('clean', function (callback) {
     rimRaf(path.clean, callback)
+});
+
+gulp.task('publish', function(){
+    ghpages.publish('build', function(err) {
+        console.log(err);
+    });
 });
 
 gulp.task('default', ['build', 'webserver', 'watch']);
