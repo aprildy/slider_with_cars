@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/Robotolight.woff2') format('woff2'), url('../fonts/Robotolight.woff') format('woff'), url('../fonts/Robotolight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto.woff2') format('woff2'), url('../fonts/Roboto.woff') format('woff'), url('../fonts/Roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Robotobold.woff2') format('woff2'), url('../fonts/Robotobold.woff') format('woff'), url('../fonts/Robotobold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.heading-primary {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 66px;
+  &--black {
+    display: block;
+    color: #121212;
+  }
+  &--green {
+    display: block;
+    color: $color-main-accent;
+  }
+  &--sub {
+    display: block;
+    color: $color-gray;
+    font-weight: 300;
+    font-size: 26px;
+    margin-top: 10px;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: $color-main-accent;
+}

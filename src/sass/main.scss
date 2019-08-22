@@ -1,0 +1,17 @@
+//VENDORS
+@import "vendors/owl-slider.css";
+
+//BASE
+@import "abstracts/variables",
+        "base/base",
+        "base/grid",
+        "base/utilities",
+        "base/typography",
+        "abstracts/mixins";
+
+//COMPONENTS
+@import "components/header",
+        "components/buttons",
+        "components/slider",
+        "components/navigation";
+

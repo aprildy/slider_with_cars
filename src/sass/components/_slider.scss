@@ -1,0 +1,97 @@
+.slider {
+  position: relative;
+  height: 100%;
+  &.owl-carousel {
+    &.owl-drag {
+      .owl-item {height: 100%;}
+    }
+    .owl-stage, .owl-item, .owl-stage-outer {
+      height: 100%;
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: 0;
+    }
+    .owl-prev, .owl-next {
+      top: 0;
+      height: 100%;
+      width: 60px;
+      background-color: transparent;
+      border: 0;
+      &:hover {
+        background-color: rgba($color-main-accent, .2);
+        //opacity: .2;
+        color: #fff;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .owl-nav {
+      .owl-prev, .owl-next {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        span {
+          display: none;
+        }
+      }
+      .owl-prev {
+        background-image: url("../img/icons/arrow-left.svg");
+      }
+      .owl-next {
+        background-image: url("../img/icons/arrow-left.svg");
+        transform: rotate(180deg);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .owl-item:nth-child(1) .slider__item {
+        background-image: $slider-gradient, url('../img/slider/car01@2x.jpg');
+      }
+      .owl-item:nth-child(2) .slider__item {
+        background-image: $slider-gradient, url('../img/slider/car02@2x.jpg');
+      }
+      .owl-item:nth-child(3) .slider__item {
+        background-image: $slider-gradient, url('../img/slider/car03@2x.jpg');
+      }
+      .owl-item:nth-child(4) .slider__item {
+        background-image: $slider-gradient, url('../img/slider/car04@2x.jpg');
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 100px;
+    &:nth-child(1) {
+      background-image: $slider-gradient, url('../img/slider/car01.jpg');
+    }
+  }
+  &-box {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-primary;
+    max-width: 500px;
+    &__heading {
+      color: inherit;
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1;
+      color: $color-light-gray;
+      margin-top: 15px;
+    }
+    .btn {
+      margin-top: 25px;
+    }
+  }
+}

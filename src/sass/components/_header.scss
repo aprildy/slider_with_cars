@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  min-height: 811px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #151B1F;
+  display: flex;
+  overflow: hidden;
+  &__left {
+    height: 100%;
+    width: 47%;
+    background-color: $color-primary;
+    //padding: 3.5% 7%;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__top-box {
+    display: flex;
+    justify-content: space-between;
+    button {
+      background: transparent;
+      border: none;
+    }
+  }
+  &__center-box {
+    .btn {
+      margin-top: 45px;
+    }
+  }
+  &__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    .copy {
+      color: $color-gray;
+    }
+    a {
+      font-size: inherit;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &__right {
+    width: 48%;
+  }
+}
