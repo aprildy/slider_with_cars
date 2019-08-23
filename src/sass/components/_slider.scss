@@ -49,7 +49,23 @@
         transform: rotate(180deg);
       }
     }
-
+    .owl-dots {
+      display: block;
+      position: relative;
+      bottom: 60px;
+      text-align: center;
+    }
+    .owl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #eee;
+      border: none;
+      margin: 5px;
+      &.active {
+        background-color: $color-main-accent;
+      }
+    }
     @media only screen and (min-width: 768px) {
       .owl-item:nth-child(1) .slider__item {
         background-image: $slider-gradient, url('../img/slider/car01@2x.jpg');
