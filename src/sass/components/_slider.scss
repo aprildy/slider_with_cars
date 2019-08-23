@@ -28,6 +28,9 @@
       &:focus {
         outline: none;
       }
+      @media (max-width: 1024px) {
+        width: 30px;
+      }
     }
     .owl-nav {
       .owl-prev, .owl-next {
@@ -72,6 +75,9 @@
     &:nth-child(1) {
       background-image: $slider-gradient, url('../img/slider/car01.jpg');
     }
+    @media (max-width: 1024px) {
+      padding: 0 60px;
+    }
   }
   &-box {
     position: relative;
@@ -92,6 +98,14 @@
     }
     .btn {
       margin-top: 25px;
+    }
+    @media (max-width: 1024px) {
+      &__heading {
+        font-size: 32px;
+      }
+      &__text {
+        font-size: 22px;
+      }
     }
   }
 }

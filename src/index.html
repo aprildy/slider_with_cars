@@ -9,25 +9,36 @@
 </head>
 <body>
 <header class="header">
-    <nav class="navigation">
+    <aside class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
         </label>
         <div class="navigation__background">&nbsp;</div>
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">Парковка</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Страховка</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Бензин</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Обслуживание</a></li>
-            </ul>
-        </nav>
-    </nav>
+        <div class="navigation__wrapper">
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Парковка</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Страховка</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Бензин</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Обслуживание</a></li>
+                    <li>
+                        <ul class="navigation__socials">
+                            <li class="navigation__social"><a href="#" class="navigation__social__icon"></a></li>
+                            <li class="navigation__social"><a href="#" class="navigation__social__icon"></a></li>
+                            <li class="navigation__social"><a href="#" class="navigation__social__icon"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </aside>
     <section class="header__left">
         <div class="header__top-box">
             <h2>Need for drive</h2>
             <button>
+                <i class="location-icon"></i>
                 Ульяновск
             </button>
         </div>
@@ -78,9 +89,6 @@
                     <button class="btn btn__slider btn__slider--04">Подробнее</button>
                 </div>
             </div>
-<!--            <div class="slider__item"></div>-->
-<!--            <div class="slider__item"></div>-->
-<!--            <div class="slider__item"></div>-->
         </div>
     </section>
 </header>

@@ -1,33 +1,41 @@
 .navigation {
   height: 100%;
   background-color: inherit;
-  width: 5%;
+  width: $navigation-area-width;
   max-width: 100%;
   &__checkbox {
     display: none;
   }
   &__button {
-    height: 7rem;
-    width: 7rem;
-    position: fixed;
-    top: 5px;
-    left: 5px;
+    height: 70px;
+    width: 70px;
+    position: relative;
     z-index: 20000;
+    display: block;
+    margin:  0 auto;
     text-align: center;
     cursor: pointer;
-    //background: #FFFFFF;
   }
   &__background {
-    //height: 6rem;
     width: 6rem;
-    //border-radius: 50%;
     position: fixed;
     top: -6rem;
     left: -6rem;
     height: 100vh;
-    z-index: 10000;
+    z-index: 99;
+    background-color: rgba(21, 27, 31, 0.81);
+    transition: transform .3s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &__wrapper {
     background-color: #111518;
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    z-index: 100;
+    /* width: 53%; */
+    position: fixed;
+    top: 0;
+    transition: .3s cubic-bezier(0.86, 0, 0.07, 1);
   }
   &__nav {
     height: 100vh;
@@ -41,22 +49,54 @@
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   &__list {
-    position: absolute;
+    //position: absolute;
+    position: relative;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: left;
     width: 100%;
   }
+  &__socials {
+
+  }
+  &__social {
+    display: inline-block;
+    &:nth-child(1) &__icon {
+      mask: url("../img/social-icons/telegram.svg");
+    }
+    &:nth-child(2) &__icon {
+      mask: url("../img/social-icons/fb.svg");
+    }
+    &:nth-child(3) &__icon {
+      mask: url("../img/social-icons/instagram.svg");
+    }
+
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
+    &__icon {
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      mask-size: cover;
+      background-color: $color-primary;
+      &:hover {
+        background-color: $color-main-accent;
+      }
+    }
+
+  }
   &__item {
-    margin: 1rem;
+    margin: 0;
   }
   &__link {
     &:link, &:visited {
       display: inline-block;
       font-size: 32px;
-      font-weight: 600;
+      font-weight: 400;
       text-transform: uppercase;
       text-decoration: none;
       background-size: 220%;
@@ -75,7 +115,13 @@
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
-  &__checkbox:checked ~ &__nav{
+
+  &__checkbox:checked ~ &__wrapper {
+    width: 53%;
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__wrapper &__nav{
     opacity: 1;
     width: 100%;
   }
@@ -88,8 +134,9 @@
     &,
     &:before,
     &:after {
-      width: 3rem;
-      height: 2px;
+      width: 24px;
+      height: 3px;
+      border-radius: 3px;
       display: inline-block;
       background-color: $color-primary;
     }
@@ -119,5 +166,14 @@
   &__checkbox:checked + &__button &__icon:after {
     transform: rotate(-135deg);
     top: 0;
+  }
+  @media (max-width: 1024px) {
+    &__button {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 10%;
   }
 }
